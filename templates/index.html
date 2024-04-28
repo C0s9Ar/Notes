@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+
+<title>Notes</title>
+<!--<link rel="icon" href="icon.png"> -->
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/notes_style.css') }}">
+<script src="{{ url_for('static', filename='js/notes.js') }}" defer></script>
+
+</head>
+<body>
+    <h1>Notes</h1>
+
+    <div class="createNote">
+        <input id="noteTitle" placeholder="Title" maxlength="35" class="inputTitle">
+        <textarea id="noteText" placeholder="Sample text" maxlength="400" class="inputText"></textarea>
+        <button class="addBtn" id="addBtn" >Add Note</button>
+    </div>
+
+    <div class="noteList" id="notes">
+    </div>
+
+    <div class="userInfo" id="userInfo">
+    </div>
+
+
+    <div class="filter">
+        <div class="comboboxDiv">
+            <h4>User:</h4>
+            <div class="combobox">
+                <select id="combobox">
+                </select>
+            </div>
+        </div>
+        <div class="dateDiv">
+            <h4>Start:</h4>
+            <input id="startDate" placeholder="1939-1-14" maxlength="10" class="dateInput">
+        </div>
+        <div class="dateDiv">
+            <h4>End:</h4>
+            <input id="endDate" placeholder="2024-4-28" maxlength="10" class="dateInput">
+        </div>
+        <button class="filterBtn" id="filterBtn" >Filter</button>     
+    </div>
+
+</body>

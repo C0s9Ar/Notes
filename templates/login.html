@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+
+<title>Log in</title>
+<!--<link rel="icon" href="icon.png"> -->
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/signup_login_style.css') }}">
+<script src="{{ url_for('static', filename='js/login.js') }}" defer></script>
+
+</head>
+<body>
+    <h1>Log in</h1>
+
+        <div class="inputField">
+            <h2>Nickname</h2>
+            <input id="nicknameInput" placeholder="Nickname" maxlength="12" class="nicknameInput">
+        </div>
+
+        <div class="inputField">
+            <h2>Password</h2>
+            <input id="passwordInput" placeholder="Password" maxlength="14" class="passwordInput">
+        </div>
+
+        <div class="btns">
+
+            <button class="" id="loginBtn">Log in</button>
+        </div>
+
+        <div class="userInfo">
+            <button class="logSignNotesBtn" id="notesBtn">Notes</button>
+            <button class="logSignNotesBtn" id="signupBtn">Sign up</button>
+        </div>
+</body>

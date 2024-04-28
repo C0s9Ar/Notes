@@ -1,0 +1,94 @@
+body {
+    background-color: #232D3F;
+}
+
+h1 {
+    color: #008170;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 10ch;
+    text-shadow: 2px 1px 1px #005B41;
+    margin-bottom: 15px;
+}
+
+h2{
+    color: #008170;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 6ch;
+    text-shadow: 1px 1px 1px #005B41;
+    margin: -5px;
+}
+
+input{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4ch;
+    background-color: #005B41;
+    color: #0F0F0F;
+    border: none;
+    width: 15ch;
+    height: 2.35ch;
+    box-shadow: 2px 2px 2px rgba(15, 15, 15, 0.6);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(15, 15, 15, 0.4);
+    transition: outline .08s ease;
+    background: linear-gradient(to right, #008170 0%, #005B41 100%);
+}
+
+input:focus{
+    outline-color: #005B41;
+    outline-width: 2px;
+    outline-style: solid;
+}
+
+.btns {
+    text-align: center;
+}
+
+.inputField {
+    text-align: center;
+}
+
+button {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 32px;
+    border-radius: 4px;
+    line-height: 0.95;
+    height: 2.5ch;
+    transition: transform 0.2s ease;
+    color: #232D3F;
+    background: linear-gradient(to right, #008170 0%, #005B41 100%);
+    border-color: #232D3F;
+    box-shadow: 2px 2px 2px rgba(15, 15, 15, 0.4);
+    margin: 10px;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+  
+button:active {
+    transform: translateY(1px);
+}
+
+h3 {
+    margin: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #008170;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2ch;
+    text-shadow: 1px 1px 1px #005B41;
+}
+
+.logSignNotesBtn {
+    width: 150px;
+    height: 3.5ch;
+}
+
+.userInfo {
+    position: absolute;
+    top:30px;
+    right: 30px;
+}

@@ -1,0 +1,432 @@
+body{
+  background-color: #232D3F;
+}
+
+h1{
+  color: #008170;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-size: 10ch;
+  text-shadow: 2px 1px 1px #005B41;
+  margin-bottom: 25px;
+}
+
+h2{
+  color: #008170;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-size: 6ch;
+  text-shadow: 1px 1px 1px #005B41;
+  margin-bottom: 25px;
+}
+
+.createNote{
+  position: relative;
+  display: table;
+  margin: 0 auto;
+  width:65ch;
+  height: 26ch;
+}
+
+.inputTitle{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 3ch;
+  background-color: #005B41;
+  color: #0F0F0F;
+  border: none;
+  width: 98%;
+  height: 3ch;
+  box-shadow: 2px 2px 2px rgba(15, 15, 15, 0.6);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgba(15, 15, 15, 0.4);
+  top:0;
+  transition: outline .08s ease;
+  background: linear-gradient(to right, #008170 0%, #005B41 100%);
+}
+.inputTitle:focus{
+  outline-color: #005B41;
+  outline-width: 2px;
+  outline-style: solid;
+}
+
+.inputText{
+  color: #0F0F0F;
+  background: linear-gradient(to right, #008170 0%, #005B41 100%);
+  box-shadow: 3px 3px 4px rgba(15, 15, 15, 0.6);
+  resize: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2ch;
+  background-color: #005B41;
+  border: none;
+  width: 40ch;
+  height: 15ch;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgba(15, 15, 15, 0.4);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  line-height: 0.9;
+  transition: outline .08s;
+}
+.inputText:focus{
+  outline-color: #005B41;
+  outline-width: 2px;
+  outline-style: solid;
+}
+
+button{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 32px;
+  border-radius: 4px;
+  line-height: 0.95;
+  transition: transform 0.2s ease;
+  width: 124px;
+}
+
+.addBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #232D3F;
+  background: linear-gradient(to right, #008170 0%, #005B41 100%);
+  border-color: #232D3F;
+  box-shadow: 2px 2px 2px rgba(15, 15, 15, 0.4);
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Notes list div */
+.noteList{
+  margin-top: 30px;
+  position: relative;
+  display: table;
+  width:100%;
+}
+
+/* Notes */
+.noteBG{
+  position: relative;
+  background: linear-gradient(to right, #008170 25%, #005B41 100%);
+  width:80ch;
+  height: 29ch;
+  margin: 8px auto;
+  border-radius: 5px;
+  border-color: #005B41;
+  border-width: 2px;
+  border-style: solid;
+  outline-color: #005B41;
+  transition: all 1s ease;
+  box-shadow: 4px 4px 4px rgba(15, 15, 15, 0.6);
+}
+.noteBG:hover{
+  transform: translateY(-5px);
+  outline-color: #005B41;
+  outline-style: solid;
+  outline-width: 1px;
+}
+
+.note{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:65ch;
+  height: 26ch;
+}
+
+/* Title input field*/
+.inputTitleList{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 3ch;
+  color: #008170;
+  width: 98%;
+  height: 3ch;
+  background: linear-gradient(to right, #232D3F 0%, #0F0F0F 100%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #0F0F0F;
+  transition: outline .08s;
+  box-shadow: 1px 1px 2px black;
+}
+.inputTitleList:focus{
+  outline-color: #232D3F;
+  outline-width: 2px;
+  outline-style: solid;
+}
+
+/* Note textarea*/
+.inputTextList{
+  color: #008170;
+  background: linear-gradient(to right, #232D3F 0%, #0F0F0F 100%);
+  resize: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2ch;
+  width: 40ch;
+  height: 15ch;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #0F0F0F;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  line-height: 0.9;
+  transition: outline .08s;
+  box-shadow: 1px 1px 2px black;
+}
+.inputTextList:focus{
+  outline-color: #232D3F;
+  outline-width: 2px;
+  outline-style: solid;
+}
+
+/* Edit and remove buttons*/
+.listBtns{
+  background: linear-gradient(to right, #232D3F 0%, #0F0F0F 100%);
+  color: #005B41;
+  border-color: #005B41;
+}
+.removeBtn{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 45px;
+  box-shadow: 1px 1px 2px black;
+}
+.editBtn{
+  height: 45px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 52px;
+  box-shadow: 1px 1px 2px black;
+}
+
+/* Empty title shake animation */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(5px); }
+}
+.shake {
+  animation: shake 0.4s ease;
+}
+
+/* Delete animation */
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  100% {
+      opacity: 0;
+      transform: translateY(-100%);
+  }
+}
+.fade-out {
+  animation: fadeOut 0.5s ease forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fadeIn 1s ease;
+}
+
+/* Nickname field*/
+.nicknameText{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 3ch;
+  color: #008170;
+  width: 8ch;
+  height: 2.5ch;
+  background: linear-gradient(to right, #232D3F 0%, #0F0F0F 100%);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #0F0F0F;
+  transition: outline .08s;
+  box-shadow: 1px 1px 2px black;
+  position: absolute;
+  right: 0;
+  margin-top: 5px;
+}
+
+.nicknameText:focus{
+  outline-color: #232D3F;
+  outline-width: 2px;
+  outline-style: solid;
+}
+
+.userInfo {
+  position: absolute;
+  top:30px;
+  right: 30px;
+  display: flex;          /* Задает flex-модель для контейнера */
+    align-items: center;    /* Центрирует элементы по вертикали */
+    justify-content: space-between;
+}
+
+.signupBtn {
+  color: #232D3F;
+  background: linear-gradient(to right, #008170 0%, #005B41 100%);
+  border-color: #232D3F;
+  box-shadow: 2px 2px 2px rgba(15, 15, 15, 0.4);
+  width: 150px;
+  height: 3.5ch;
+  margin: 10px;
+}
+
+.loginBtn {
+  color: #232D3F;
+  background: linear-gradient(to right, #008170 0%, #005B41 100%);
+  border-color: #232D3F;
+  box-shadow: 2px 2px 2px rgba(15, 15, 15, 0.4);
+  width: 150px;
+  height: 3.5ch;
+  margin: 10px;
+}
+
+h3{
+  color: #008170;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-size: 4ch;
+  text-shadow: 1px 1px 1px #005B41;
+  width: 150px;
+  margin: auto;
+}
+
+
+.filter {
+  position: fixed;
+  background-color: #008170;
+  background: linear-gradient(to right, #008170 25%, #005B41 100%);
+  width: 32ch;
+  height: 22ch;
+  border-radius: 5px;
+  border-color: #005B41;
+  border-width: 2px;
+  border-style: solid;
+  outline-color: #005B41;
+  transition: all 1s ease;
+  box-shadow: 4px 4px 4px rgba(15, 15, 15, 0.6);
+  top: 30%;
+  left: 3ch;
+  transition: all 1s ease;
+  align-items:first baseline;
+}
+
+.filter:hover{
+  transform: translateY(-5px);
+  outline-color: #005B41;
+  outline-style: solid;
+  outline-width: 1px;
+}
+
+/* Combobox */
+.combobox {
+  position: relative;
+  display: inline-block;
+}
+
+.combobox select {
+  margin-left: -30px;
+  appearance: none;
+  padding: 4px 20px 4px 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 14ch;
+  cursor: pointer;
+  color: #008170; /* Изменен цвет текста */
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #232D3F;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #232D3F;
+}
+
+.combobox::after {
+  content: '\25BC'; 
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #008170;
+}
+
+h4{
+  color: #232D3F;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-size: 3ch;
+  text-shadow: 1px 1px 1px #232D3F;
+  width: 150px;
+  margin-left: -10px;
+}
+
+.dateInput {
+  margin-left: -30px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2ch;
+  color: #008170;
+  width: 40%;
+  height: 3ch;
+  background: linear-gradient(to right, #232D3F 0%, #0F0F0F 100%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #0F0F0F;
+  transition: outline .08s;
+  box-shadow: 1px 1px 2px black;
+}
+.comboboxDiv {
+  margin-top: -20px;
+  display: flex;
+  align-items:center;
+}
+
+.dateDiv {
+  margin-top: -50px;
+  display: flex;
+  align-items:center;
+}
+
+.filterBtn {
+  background: linear-gradient(to right, #232D3F 0%, #0F0F0F 100%);
+  color: #005B41;
+  border-color: #005B41;
+  position: relative;
+  bottom: 12%;
+  left: 35%;
+  height: 40px;
+  box-shadow: 1px 1px 2px black;
+}
