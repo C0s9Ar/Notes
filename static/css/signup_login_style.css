@@ -92,3 +92,24 @@ h3 {
     top:30px;
     right: 30px;
 }
+
+.errorMessage {
+    font-weight: lighter;
+    color: red;
+    text-shadow: 1px 1px 1px red;
+    text-align: center;
+    font-size: 3ch;
+    display: none;
+}
+
+/* Error shake animation */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
+  }
+  .shake {
+    animation: shake 0.4s ease;
+  }

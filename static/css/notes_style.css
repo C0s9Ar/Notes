@@ -261,7 +261,7 @@ button:active {
   font-size: 3ch;
   color: #008170;
   width: 8ch;
-  height: 2.5ch;
+  height: 2.2ch;
   background: linear-gradient(to right, #232D3F 0%, #0F0F0F 100%);
   border-radius: 5px;
   border-style: solid;
@@ -325,7 +325,7 @@ h3{
   background-color: #008170;
   background: linear-gradient(to right, #008170 25%, #005B41 100%);
   width: 32ch;
-  height: 22ch;
+  height: 25ch;
   border-radius: 5px;
   border-color: #005B41;
   border-width: 2px;
@@ -333,7 +333,7 @@ h3{
   outline-color: #005B41;
   transition: all 1s ease;
   box-shadow: 4px 4px 4px rgba(15, 15, 15, 0.6);
-  top: 30%;
+  top: 40%;
   left: 3ch;
   transition: all 1s ease;
   align-items:first baseline;
@@ -387,27 +387,26 @@ h4{
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
   font-size: 3ch;
-  text-shadow: 1px 1px 1px #232D3F;
+  text-shadow: 1px 1px 1px #0F0F0F;
   width: 150px;
   margin-left: -10px;
+  font-weight: lighter;
 }
 
 .dateInput {
   margin-left: -30px;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 2ch;
+  font-size: 1.75ch;
   color: #008170;
-  width: 40%;
-  height: 3ch;
+  height: 3.5ch;
   background: linear-gradient(to right, #232D3F 0%, #0F0F0F 100%);
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
   border-style: solid;
   border-width: 2px;
   border-color: #0F0F0F;
   transition: outline .08s;
-  box-shadow: 1px 1px 2px black;
+  box-shadow: 1px 1px 2px #0F0F0F;
 }
+
 .comboboxDiv {
   margin-top: -20px;
   display: flex;
@@ -425,8 +424,18 @@ h4{
   color: #005B41;
   border-color: #005B41;
   position: relative;
-  bottom: 12%;
-  left: 35%;
+  bottom: 2%;
+  left: 30%;
   height: 40px;
   box-shadow: 1px 1px 2px black;
+}
+
+.dateText {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.75ch;
+  color: #232D3F;
+  position: absolute;
+  text-shadow: 1px 1px 1px black;
+  right: 0px;
+  margin-top: 45px;
 }
