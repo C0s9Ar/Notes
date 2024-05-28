@@ -7,7 +7,7 @@ from datetime import timedelta
 app = Flask(__name__)
 app.config["JWT_COOKIE_SECURE"] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
-app.config['JWT_SECRET_KEY'] = 'sGhmjitq'
+app.config['JWT_SECRET_KEY'] = 'secred-code' # enter the secred code
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(minutes=30)
 app.config['JWT_REFRESH_TOKEN_EXPIRES'] = timedelta(days=30)
 db = SQLAlchemy(app)
